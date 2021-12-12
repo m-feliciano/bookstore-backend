@@ -1,4 +1,4 @@
-package src.io.demo.livraria.intefaces;
+package src.io.demo.bookstore.intefaces;
 
 @FunctionalInterface
 public interface Promotional {

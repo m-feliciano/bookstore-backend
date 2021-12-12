@@ -1,16 +1,17 @@
-package src.io.demo.livraria.entities;
+package src.io.demo.bookstore.entities;
 
-import src.io.demo.livraria.intefaces.Promotional;
+import src.io.demo.bookstore.intefaces.Promotional;
 
-public class printedBook extends Book implements Promotional {
+public class PrintedBook extends Book implements Promotional {
 
-	public printedBook(String name, String description, double value, String isbn, Author author) {
+	public PrintedBook(String name, String description, double value, String isbn, Author author) {
 		super(name, description, value, isbn, author);
 	}
 
 	public double getPrintRate() {
 		return this.getValue() * 0.05;
 	}
+
 
 	@Override
 	public boolean applyDiscountFrom(double percentage) {

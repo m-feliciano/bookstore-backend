@@ -1,10 +1,10 @@
-package src.io.demo.livraria.entities;
+package src.io.demo.bookstore.entities;
 
-public class publishingCompany {
+public class PublishingCompany {
 
 	private String nomeFantasia, razaoSocial, cnpj;
 
-	public publishingCompany(String nomeFantasia, String razaoSocial, String cnpj) {
+	public PublishingCompany(String nomeFantasia, String razaoSocial, String cnpj) {
 		super();
 		this.nomeFantasia = nomeFantasia;
 		this.razaoSocial = razaoSocial;

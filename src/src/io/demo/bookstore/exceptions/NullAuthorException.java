@@ -1,4 +1,4 @@
-package src.io.demo.livraria.exceptions;
+package src.io.demo.bookstore.exceptions;
 
 public class NullAuthorException extends RuntimeException {
 

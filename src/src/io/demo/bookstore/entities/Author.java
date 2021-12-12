@@ -1,4 +1,4 @@
-package src.io.demo.livraria.entities;
+package src.io.demo.bookstore.entities;
 
 public class Author {
 
@@ -15,11 +15,14 @@ public class Author {
 
 	}
 
-	public String getname() {
+	public Author() {
+	}
+
+	public String getName() {
 		return name;
 	}
 
-	public void setname(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 

@@ -1,6 +1,6 @@
-package src.io.demo.livraria.entities;
+package src.io.demo.bookstore.entities;
 
-import src.io.demo.livraria.intefaces.Promotional;
+import src.io.demo.bookstore.intefaces.Promotional;
 
 public class Ebook extends Book implements Promotional {
 

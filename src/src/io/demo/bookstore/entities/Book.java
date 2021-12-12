@@ -1,10 +1,10 @@
 /**
  *
  */
-package src.io.demo.livraria.entities;
+package src.io.demo.bookstore.entities;
 
-import src.io.demo.livraria.exceptions.NullAuthorException;
-import src.io.demo.livraria.intefaces.Product;
+import src.io.demo.bookstore.exceptions.NullAuthorException;
+import src.io.demo.bookstore.intefaces.Product;
 
 public abstract class Book implements Product {
 
@@ -20,7 +20,7 @@ public abstract class Book implements Product {
 		this.description = description;
 		this.isbn = isbn;
 		this.value = value;
-		setAutor(author);
+		setAuthor(author);
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public abstract class Book implements Product {
 		return author;
 	}
 
-	public void setAutor(Author author) {
+	public void setAuthor(Author author) {
 		if (author == null) {
 			throw new NullAuthorException("O author n�o pode ser nulo!");
 		}

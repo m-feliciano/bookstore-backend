@@ -1,10 +1,10 @@
-package src.io.demo.livraria.entities;
+package src.io.demo.bookstore.entities;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BinaryOperator;
 
-import src.io.demo.livraria.intefaces.Product;
+import src.io.demo.bookstore.intefaces.Product;
 
 public class ShoppingCart {
 

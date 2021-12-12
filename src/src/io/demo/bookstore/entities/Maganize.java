@@ -1,21 +1,21 @@
-package src.io.demo.livraria.entities;
+package src.io.demo.bookstore.entities;
 
-import src.io.demo.livraria.intefaces.Product;
-import src.io.demo.livraria.intefaces.Promotional;
+import src.io.demo.bookstore.intefaces.Product;
+import src.io.demo.bookstore.intefaces.Promotional;
 
 public class Maganize implements Product, Promotional {
 
 	private String name, description;
 	private double value;
-	private publishingCompany publishingCompany;
+	private PublishingCompany PublishingCompany;
 
 	public Maganize(String name, String description, double value,
-			publishingCompany publishingCompany) {
+			PublishingCompany PublishingCompany) {
 		super();
 		this.name = name;
 		this.description = description;
 		this.value = value;
-		this.publishingCompany = publishingCompany;
+		this.PublishingCompany = PublishingCompany;
 	}
 
 	public String getName() {
@@ -42,12 +42,12 @@ public class Maganize implements Product, Promotional {
 		this.value = value;
 	}
 
-	public publishingCompany getPublishingCompany() {
-		return publishingCompany;
+	public PublishingCompany getPublishingCompany() {
+		return PublishingCompany;
 	}
 
-	public void setPublishingCompany(publishingCompany publishingCompany) {
-		this.publishingCompany = publishingCompany;
+	public void setPublishingCompany(PublishingCompany PublishingCompany) {
+		this.PublishingCompany = PublishingCompany;
 	}
 
 	@Override
@@ -64,7 +64,7 @@ public class Maganize implements Product, Promotional {
 	@Override
 	public String toString() {
 		return "Maganize [name=" + name + ", description=" + description + ", value=" + value + ", publishingCompany="
-				+ publishingCompany + "]";
+				+ PublishingCompany + "]";
 	}
 
 }
