@@ -12,7 +12,6 @@ public class PrintedBook extends Book implements Promotional {
 		return this.getValue() * 0.05;
 	}
 
-
 	@Override
 	public boolean applyDiscountFrom(double percentage) {
 		int limite = 80;

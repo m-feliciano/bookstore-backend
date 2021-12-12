@@ -1,5 +1,6 @@
 package src.io.demo.bookstore.entities;
 
+import src.io.demo.bookstore.intefaces.Product;
 import src.io.demo.bookstore.intefaces.Promotional;
 
 public class Ebook extends Book implements Promotional {
@@ -28,6 +29,11 @@ public class Ebook extends Book implements Promotional {
 			return true;
 		}
 		return false;
+	}
+
+	@Override
+	public int compareTo(Product o) {
+		return 0;
 	}
 
 }

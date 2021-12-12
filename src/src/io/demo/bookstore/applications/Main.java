@@ -4,10 +4,10 @@ import src.io.demo.bookstore.entities.Author;
 import src.io.demo.bookstore.entities.Book;
 import src.io.demo.bookstore.entities.Ebook;
 import src.io.demo.bookstore.entities.Maganize;
-import src.io.demo.bookstore.entities.ShoppingCart;
 import src.io.demo.bookstore.entities.PocketBook;
 import src.io.demo.bookstore.entities.PrintedBook;
 import src.io.demo.bookstore.entities.PublishingCompany;
+import src.io.demo.bookstore.entities.ShoppingCart;
 
 public class Main {
 
@@ -31,7 +31,6 @@ public class Main {
 		System.out.printf("Total: R$%.2f%n", shoppingCart.getTotalValue());
 
 		/* Revista */
-
 		PublishingCompany PublishingCompany = new PublishingCompany("La crise", "ltda", "ltda");
 		Maganize maganize = new Maganize("Lo Dev", "Where are they?", 10.99, PublishingCompany);
 

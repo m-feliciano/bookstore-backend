@@ -74,4 +74,10 @@ public abstract class Book implements Product {
 				+ author + "}";
 	}
 
+	@Override
+	public int compareTo(Product o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

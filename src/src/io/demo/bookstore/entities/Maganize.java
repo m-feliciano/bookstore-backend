@@ -5,12 +5,11 @@ import src.io.demo.bookstore.intefaces.Promotional;
 
 public class Maganize implements Product, Promotional {
 
-	private String name, description;
+	private String name, description, isbn;
 	private double value;
 	private PublishingCompany PublishingCompany;
 
-	public Maganize(String name, String description, double value,
-			PublishingCompany PublishingCompany) {
+	public Maganize(String name, String description, double value, PublishingCompany PublishingCompany) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -65,6 +64,16 @@ public class Maganize implements Product, Promotional {
 	public String toString() {
 		return "Maganize [name=" + name + ", description=" + description + ", value=" + value + ", publishingCompany="
 				+ PublishingCompany + "]";
+	}
+
+	@Override
+	public int compareTo(Product o) {
+		return 0;
+	}
+
+	@Override
+	public String getIsbn() {
+		return isbn;
 	}
 
 }
