@@ -7,6 +7,11 @@ public class PrintedBook extends Book implements Promotional {
 	public PrintedBook(String name, String description, double value, String isbn, Author author) {
 		super(name, description, value, isbn, author);
 	}
+	
+	public PrintedBook(Author author) {
+		super(author);
+		this.setAuthor(author);
+	}
 
 	public double getPrintRate() {
 		return this.getValue() * 0.05;

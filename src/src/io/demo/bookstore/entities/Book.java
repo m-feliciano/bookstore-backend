@@ -22,7 +22,10 @@ public abstract class Book implements Product {
 		this.value = value;
 		setAuthor(author);
 	}
-
+	public Book(Author author) {
+		setAuthor(author);
+	}
+	
 	@Override
 	public String getName() {
 		return name;
