@@ -1,28 +1,29 @@
 /**
  *
  */
-package src.io.demo.bookstore.entities;
+package br.com.feliciano.bookstore.entities;
 
-import src.io.demo.bookstore.exceptions.NullAuthorException;
-import src.io.demo.bookstore.intefaces.Product;
+import java.math.BigDecimal;
+
+import br.com.feliciano.bookstore.exceptions.NullAuthorException;
+import br.com.feliciano.bookstore.intefaces.Product;
 
 public abstract class Book implements Product {
 
 	private String name;
 	private String description;
 	private String isbn;
-	private double value;
+	private BigDecimal value;
 	private Author author;
 
-	public Book(String name, String description, double value, String isbn, Author author) {
-		super();
+	protected Book(String name, String description, BigDecimal value, String isbn, Author author) {
 		this.name = name;
 		this.description = description;
 		this.isbn = isbn;
 		this.value = value;
 		setAuthor(author);
 	}
-	public Book(Author author) {
+	protected Book(Author author) {
 		setAuthor(author);
 	}
 	
@@ -35,6 +36,7 @@ public abstract class Book implements Product {
 		this.name = name;
 	}
 
+	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -43,6 +45,7 @@ public abstract class Book implements Product {
 		this.description = description;
 	}
 
+	@Override
 	public String getIsbn() {
 		return isbn;
 	}
@@ -52,11 +55,11 @@ public abstract class Book implements Product {
 	}
 
 	@Override
-	public double getValue() {
+	public BigDecimal getPrice() {
 		return value;
 	}
 
-	public void setValue(double value) {
+	public void setValue(BigDecimal value) {
 		this.value = value;
 	}
 
@@ -66,21 +69,27 @@ public abstract class Book implements Product {
 
 	public void setAuthor(Author author) {
 		if (author == null) {
-			throw new NullAuthorException("O author n�o pode ser nulo!");
+			throw new NullAuthorException("O author nao pode ser nulo!");
 		}
 		this.author = author;
 	}
 
 	@Override
 	public String toString() {
-		return "{ name=" + name + ", description=" + description + ", isbn=" + isbn + ", value=" + value + ", autor="
-				+ author + "}";
-	}
-
-	@Override
-	public int compareTo(Product o) {
-		// TODO Auto-generated method stub
-		return 0;
+		return new StringBuilder()
+				.append(this.getClass().getSimpleName())
+				.append("[name= ")
+				.append(name)
+				.append(", description=")
+				.append(description)
+				.append(", isbn=")
+				.append(isbn)
+				.append(", value=")
+				.append(value)			
+				.append(", ")
+				.append(author)
+				.append("]")
+				.toString();
 	}
 
 }

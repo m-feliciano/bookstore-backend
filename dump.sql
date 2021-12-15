@@ -1,35 +1,3 @@
-# bookstore-backend
-
-Aplicação backend simples para listagem de produtos, para saber mais sobre o front-end da aplicação, clique [aqui](https://github.com/m-feliciano/bookstore-javafx-frontend).
-
----
-
-Neste exemplo, é utilizado o banco de dados PostgreSQL.
-
-## Estrutura de diretorios
-```
-C:.
-└───br
-    └───com
-        └───feliciano
-            └───bookstore
-                ├───applications
-                ├───entities
-                ├───exceptions
-                ├───infra
-                │   └───dao
-                ├───intefaces
-                ├───services
-                └───util
-```
-
-## Criando Banco de Dados
-```
-CREATE DATABASE bookstore_javafx;
-```
-
-## Criando Tabela e Sequence
-```
 CREATE TABLE IF NOT EXISTS tb_product
 (
     id          INT          NOT NULL,
@@ -46,10 +14,7 @@ CREATE SEQUENCE tb_product_id_seq;
 
 ALTER TABLE tb_product
     ALTER column id SET DEFAULT nextval('tb_product_id_seq');
-```
-
-## Populando Tabela
-```
+    
 INSERT INTO tb_product VALUES
   (1,'Java 8 Prático','Novos recursos da linguagem','59.90','978-85-66250-46-6'),
   (2,'Java SE 7 Programmer I','O guia para sua certificação','59.90','123-45-67890-11-2'),
@@ -64,4 +29,3 @@ INSERT INTO tb_product VALUES
   (11,'JSF e JPA','Aplicações Java para a web','59.90','978-85-66250-01-5'),
   (12,'A Web Mobile','Programe para um mundo de muitos dispositivos','59.90','978-85-66250-23-7'),
   (13,'Desbravando Java e OO','Um guia para o iniciante da linguagem','59.90','123-45-67890-11-2');
-```
